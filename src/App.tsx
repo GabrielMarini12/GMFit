@@ -1,9 +1,28 @@
-function App() {
-  return (
-    <div>
-      <h1>Academia</h1>
-    </div>
-  );
-}
+import { createBrowserRouter } from "react-router-dom";
+import { Home } from "./pages/home";
+import { Login } from "./pages/login";
+import { Registro } from "./pages/register";
 
-export default App;
+import { Layout } from "./components/layout";
+
+const router = createBrowserRouter([
+  {
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+    ],
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/register",
+    element: <Registro />,
+  },
+]);
+
+export { router };
