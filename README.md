@@ -4,3 +4,4 @@
   - React JS
   - TypeScript
   - react router dom
+  - react icons
