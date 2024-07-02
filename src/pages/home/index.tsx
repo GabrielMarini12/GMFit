@@ -8,10 +8,10 @@ interface AcademiaProps {
   id: number;
   name: string;
   address: string;
-  smart: string;
-  black: string;
-  fit: string;
-  promotion: string;
+  smart: number;
+  black: number;
+  fit: number;
+  promotion: number;
   cover: string;
 }
 
@@ -63,37 +63,69 @@ export function Home() {
             </Link>
 
             <span className=" bg-green-100 text-green-600 font-medium py-1 mx-4 rounded-xl text-sm flex justify-center">
-              1° mês por R$ {academia.promotion} em Todos os Planos
+              1° mês por{" "}
+              {academia.promotion.toLocaleString("pt-BR", {
+                style: "currency",
+                currency: "BRL",
+              })}{" "}
+              em Todos os Planos
             </span>
 
             <div className="flex justify-center gap-8 mt-5">
               <div className="flex flex-col items-center">
                 <strong className="text-sm font-medium uppercase">SMART</strong>
                 <p className="text-slate-300 text-sm line-through">
-                  R$ {academia.smart}
+                  {" "}
+                  {academia.smart.toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
                 </p>
                 <strong className="font-medium">
-                  R$ {academia.promotion}*
+                  {" "}
+                  {academia.promotion.toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                  *
                 </strong>
               </div>
 
               <div className="flex flex-col items-center">
                 <strong className="text-sm font-medium uppercase">BLACK</strong>
                 <p className="text-slate-300 text-sm line-through">
-                  R$ {academia.black}
+                  {" "}
+                  {academia.black.toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
                 </p>
                 <strong className="font-medium">
-                  R$ {academia.promotion}*
+                  {" "}
+                  {academia.promotion.toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                  *
                 </strong>
               </div>
 
               <div className="flex flex-col items-center">
                 <strong className="text-sm font-medium uppercase">FIT</strong>
                 <p className="text-slate-300 text-sm line-through">
-                  R$ {academia.fit}
+                  {" "}
+                  {academia.fit.toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
                 </p>
                 <strong className="font-medium">
-                  R$ {academia.promotion}*
+                  {" "}
+                  {academia.promotion.toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                  *
                 </strong>
               </div>
             </div>
