@@ -4,7 +4,7 @@ import { FiUser } from "react-icons/fi";
 
 export function Header() {
   return (
-    <div className="w-full flex items-center justify-center h-28 bg-gray-950 mb-4">
+    <div className="w-full flex items-center justify-center h-28 bg-gray-950 mb-16 sticky top-0 shadow-xl shadow-slate-300">
       <header className="flex w-full max-w-7xl items-center justify-between px-4 mx-auto">
         <Link to="/">
           <img src={logoImg} alt="Logo do site" className="h-64" />

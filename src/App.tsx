@@ -16,7 +16,7 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/planos",
+        path: "/planos/:id",
         element: <Planos />,
       },
       {

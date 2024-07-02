@@ -56,7 +56,7 @@ export function Home() {
             <p className="font-bold text-2xl mt-1 px-4">{academia.name}</p>
             <small className="px-4 text-slate-400">{academia.address}</small>
 
-            <Link to="/login">
+            <Link to={`/academias/${academia.id}`}>
               <p className="mt-3 px-4 text-green-600 font-medium mb-7">
                 Ver academia 👈
               </p>
@@ -131,9 +131,11 @@ export function Home() {
             </div>
 
             <div className="px-4">
-              <button className="w-full bg-yellow-400 items-center my-4 p-4 rounded-full font-medium hover:bg-yellow-500">
-                Ver planos
-              </button>
+              <Link to={`/planos/${academia.id}`}>
+                <button className="w-full bg-yellow-400 items-center my-4 p-4 rounded-full font-medium hover:bg-yellow-500">
+                  Ver planos
+                </button>
+              </Link>
             </div>
           </section>
         ))}
