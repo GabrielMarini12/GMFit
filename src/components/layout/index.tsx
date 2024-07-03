@@ -1,4 +1,5 @@
 import { Header } from "../header";
+import { BtnWhatsapp } from "../btnWhatsapp";
 import { Footer } from "../footer";
 import { Outlet } from "react-router-dom";
 
@@ -7,6 +8,7 @@ export function Layout() {
     <>
       <Header />
       <Outlet />
+      <BtnWhatsapp />
       <Footer />
     </>
   );
