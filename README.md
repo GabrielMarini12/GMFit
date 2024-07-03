@@ -11,6 +11,7 @@
   - zod
   - npm install -g json-server
   - axios
+  - firebase
 
 - Rodar Api
   - json-server --watch db.json
