@@ -6,6 +6,7 @@ import { Academias } from "./pages/academias";
 import { Planos } from "./pages/planos";
 
 import { Layout } from "./components/layout";
+import { Private } from "./routes/Private";
 
 const router = createBrowserRouter([
   {
@@ -17,11 +18,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/planos/:id",
-        element: <Planos />,
+        element: (
+          <Private>
+            <Planos />
+          </Private>
+        ),
       },
       {
         path: "/academias/:id",
-        element: <Academias />,
+        element: (
+          <Private>
+            <Academias />
+          </Private>
+        ),
       },
     ],
   },
