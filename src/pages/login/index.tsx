@@ -73,6 +73,11 @@ export function Login() {
             Acessar
           </button>
         </form>
+
+        <Link to="/register">
+          Ainda não possui uma conta?{" "}
+          <span className="font-medium">Cadastre-se!</span>
+        </Link>
       </div>
     </Container>
   );
