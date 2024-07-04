@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import { api } from "../../services/api";
 
-interface AcademiaProps {
+export interface AcademiaProps {
   id: number;
   name: string;
   address: string;

@@ -10,7 +10,7 @@ export function Private({ children }: PrivateProps) {
   const { signed, loadingAuth } = useContext(AuthContext);
 
   if (loadingAuth) {
-    return <p>Carregando</p>;
+    return <div></div>;
   }
 
   if (!signed) {
