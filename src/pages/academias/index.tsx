@@ -4,15 +4,14 @@ import { api } from "../../services/api";
 import { Container } from "../../components/container";
 import { AcademiaProps } from "../home";
 
-import {
-  FaArrowCircleRight,
-  FaArrowCircleLeft,
-  FaStopwatch,
-} from "react-icons/fa";
+import { FaStopwatch } from "react-icons/fa";
+
+import { Swiper, SwiperSlide } from "swiper/react";
 
 export function Academias() {
   const { id } = useParams();
   const [academia, setAcademia] = useState<AcademiaProps>();
+  const [sliderPreView, setSliderPreView] = useState<number>(4);
 
   useEffect(() => {
     async function getAcademia() {
@@ -22,6 +21,24 @@ export function Academias() {
 
     getAcademia();
   }, [id]);
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth < 720) {
+        setSliderPreView(2);
+      } else {
+        setSliderPreView(4);
+      }
+    }
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <Container>
@@ -35,17 +52,21 @@ export function Academias() {
               src={academia.cover}
             />
 
-            <div className="flex max-w-full justify-center items-center gap-2">
-              <FaArrowCircleLeft size={22} />
-
-              {academia.imagens.map((imagem) => (
-                <img
-                  className=" rounded-lg mb-8 max-w-20 shadow-lg shadow-slate-300 cursor-pointer opacity-40 hover:opacity-100"
-                  src={imagem}
-                />
-              ))}
-
-              <FaArrowCircleRight size={22} />
+            <div className="ml-12 mr-12 max-sm:ml-6 max-sm:mr-6">
+              <Swiper
+                slidesPerView={sliderPreView}
+                pagination={{ clickable: true }}
+                navigation
+              >
+                {academia.imagens.map((imagem) => (
+                  <SwiperSlide key={imagem} className="pl-1 pr-1">
+                    <img
+                      className="mb-8 w-full h-24 rounded-lg cursor-pointer opacity-40 hover:opacity-100"
+                      src={imagem}
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
           </section>
         )}
@@ -89,7 +110,7 @@ export function Academias() {
             </section>
 
             <section className="px-6">
-              <Link to="/planos">
+              <Link to={`/planos/${academia.id}`}>
                 <button className="p-3 bg-yellow-400 w-full rounded-full font-medium text-lg mt-12 cursor-pointer hover:bg-yellow-500  max-sm:mt-6">
                   Ver planos
                 </button>
