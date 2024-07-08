@@ -11,7 +11,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 export function Academias() {
   const { id } = useParams();
   const [academia, setAcademia] = useState<AcademiaProps>();
-  const [sliderPreView, setSliderPreView] = useState<number>(4);
 
   useEffect(() => {
     async function getAcademia() {
@@ -22,24 +21,6 @@ export function Academias() {
     getAcademia();
   }, [id]);
 
-  useEffect(() => {
-    function handleResize() {
-      if (window.innerWidth < 720) {
-        setSliderPreView(2);
-      } else {
-        setSliderPreView(4);
-      }
-    }
-
-    handleResize();
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
     <Container>
       <main className="grid grid-cols-1 gap-6 lg:grid-cols-2">
@@ -47,27 +28,20 @@ export function Academias() {
           <section key={academia.id} className="w-full mb-4">
             <p className="px-4 text-xl mb-2">Academia</p>
             <p className="font-bold text-3xl px-4 mb-6">{academia.name}</p>
-            <img
-              className="w-full rounded-lg mb-8 max-h-fit shadow-lg shadow-slate-300"
-              src={academia.cover}
-            />
-
-            <div className="ml-12 mr-12 max-sm:ml-6 max-sm:mr-6">
-              <Swiper
-                slidesPerView={sliderPreView}
-                pagination={{ clickable: true }}
-                navigation
-              >
-                {academia.imagens.map((imagem) => (
-                  <SwiperSlide key={imagem} className="pl-1 pr-1">
-                    <img
-                      className="mb-8 w-full h-24 rounded-lg cursor-pointer opacity-40 hover:opacity-100 transition-all"
-                      src={imagem}
-                    />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
+            <Swiper
+              slidesPerView={1}
+              pagination={{ clickable: true }}
+              navigation
+            >
+              {academia.imagens.map((imagem) => (
+                <SwiperSlide key={imagem} className="pl-1 pr-1">
+                  <img
+                    className="w-full rounded-lg mb-8 max-h-fit shadow-lg shadow-slate-300 z-0"
+                    src={imagem}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </section>
         )}
 
@@ -108,17 +82,18 @@ export function Academias() {
                 ></iframe>
               </div>
             </section>
-
-            <section className="px-6">
-              <Link to={`/planos/${academia.id}`}>
-                <button className="p-3 bg-yellow-400 w-full rounded-full font-medium text-lg mt-12 cursor-pointer hover:bg-yellow-500 transition-all max-sm:mt-6">
-                  Ver planos
-                </button>
-              </Link>
-            </section>
           </div>
         )}
       </main>
+      {academia && (
+        <section className="px-6">
+          <Link to={`/planos/${academia.id}`}>
+            <button className="p-3 bg-yellow-400 w-full rounded-full font-medium text-lg mt-6 cursor-pointer hover:bg-yellow-500 transition-all max-sm:mt-6">
+              Quero treinar aqui!
+            </button>
+          </Link>
+        </section>
+      )}
     </Container>
   );
 }
