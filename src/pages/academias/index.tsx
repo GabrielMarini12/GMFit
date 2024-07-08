@@ -61,7 +61,7 @@ export function Academias() {
                 {academia.imagens.map((imagem) => (
                   <SwiperSlide key={imagem} className="pl-1 pr-1">
                     <img
-                      className="mb-8 w-full h-24 rounded-lg cursor-pointer opacity-40 hover:opacity-100"
+                      className="mb-8 w-full h-24 rounded-lg cursor-pointer opacity-40 hover:opacity-100 transition-all"
                       src={imagem}
                     />
                   </SwiperSlide>
@@ -111,7 +111,7 @@ export function Academias() {
 
             <section className="px-6">
               <Link to={`/planos/${academia.id}`}>
-                <button className="p-3 bg-yellow-400 w-full rounded-full font-medium text-lg mt-12 cursor-pointer hover:bg-yellow-500  max-sm:mt-6">
+                <button className="p-3 bg-yellow-400 w-full rounded-full font-medium text-lg mt-12 cursor-pointer hover:bg-yellow-500 transition-all max-sm:mt-6">
                   Ver planos
                 </button>
               </Link>

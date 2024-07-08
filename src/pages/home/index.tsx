@@ -137,7 +137,7 @@ export function Home() {
 
             <div className="px-4">
               <Link to={`/planos/${academia.id}`}>
-                <button className="w-full bg-yellow-400 items-center my-4 p-4 rounded-full font-medium hover:bg-yellow-500">
+                <button className="w-full bg-yellow-400 items-center my-4 p-4 rounded-full font-medium hover:bg-yellow-500 transition-all">
                   Ver planos
                 </button>
               </Link>
