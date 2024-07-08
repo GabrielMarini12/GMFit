@@ -2,7 +2,7 @@
 
 - Dependência
 
-  - React JS
+  - ReactJS
   - TypeScript
   - react router dom
   - react icons
