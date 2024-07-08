@@ -38,22 +38,12 @@ export function Academias() {
             <div className="flex max-w-full justify-center items-center gap-2">
               <FaArrowCircleLeft size={22} />
 
-              <img
-                className=" rounded-lg mb-8 max-w-20 shadow-lg shadow-slate-300 cursor-pointer opacity-40 hover:opacity-100"
-                src={academia.cover}
-              />
-              <img
-                className=" rounded-lg mb-8 max-w-20 shadow-lg shadow-slate-300 cursor-pointer opacity-40 hover:opacity-100"
-                src={academia.cover}
-              />
-              <img
-                className=" rounded-lg mb-8 max-w-20 shadow-lg shadow-slate-300 cursor-pointer opacity-40 hover:opacity-100"
-                src={academia.cover}
-              />
-              <img
-                className=" rounded-lg mb-8 max-w-20 shadow-lg shadow-slate-300 cursor-pointer opacity-40 hover:opacity-100"
-                src={academia.cover}
-              />
+              {academia.imagens.map((imagem) => (
+                <img
+                  className=" rounded-lg mb-8 max-w-20 shadow-lg shadow-slate-300 cursor-pointer opacity-40 hover:opacity-100"
+                  src={imagem}
+                />
+              ))}
 
               <FaArrowCircleRight size={22} />
             </div>

@@ -17,6 +17,7 @@ export interface AcademiaProps {
   horariosegundaasexta: string;
   horariosabadoeferiado: string;
   horariodomingo: string;
+  imagens: string[];
 }
 
 export function Home() {
