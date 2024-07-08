@@ -12,6 +12,7 @@
   - npm install -g json-server
   - axios
   - firebase
+  - swiper
 
 - Rodar Api
   - json-server --watch db.json

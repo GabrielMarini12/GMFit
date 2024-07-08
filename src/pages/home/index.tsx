@@ -13,6 +13,10 @@ export interface AcademiaProps {
   fit: number;
   promotion: number;
   cover: string;
+  mapa: string;
+  horariosegundaasexta: string;
+  horariosabadoeferiado: string;
+  horariodomingo: string;
 }
 
 export function Home() {
