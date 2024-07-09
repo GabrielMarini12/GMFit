@@ -5,7 +5,7 @@ import { Container } from "../../components/container";
 import { AcademiaProps } from "../home";
 import btnHelp from "../../assets/botaoHelp.png";
 
-import { FaStopwatch } from "react-icons/fa";
+import { FaStopwatch, FaLocationArrow } from "react-icons/fa";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -50,6 +50,10 @@ export function Academias() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  function handleScroll() {
+    window.scrollTo(0, 0);
+  }
 
   return (
     <Container>
@@ -205,6 +209,7 @@ export function Academias() {
                     <img
                       className="w-full rounded-tr-lg rounded-tl-lg mb-2 max-h-40 object-cover "
                       src={academia.cover}
+                      onClick={handleScroll}
                     />
                   </Link>
 
@@ -212,9 +217,10 @@ export function Academias() {
                   <p className="pb-2 text-sm text-gray-500 px-3 mt-1">
                     {academia.address}
                   </p>
-                  <p className="absolute bg-white text-gray-500 py-1 px-2 rounded-full top-1 left-1 text-xs">
-                    {academia.distancia}m
-                  </p>
+                  <div className="flex justify-center items-center absolute rounded-full top-1 left-1 bg-white text-gray-500 py-1 px-2  text-xs">
+                    <FaLocationArrow />
+                    <p className="ml-1">{academia.distancia}m</p>
+                  </div>
                 </div>
               </SwiperSlide>
             ))}

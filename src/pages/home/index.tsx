@@ -40,7 +40,7 @@ export function Home() {
           placeholder="Digite aqui a cidade..."
           className="w-full border-2 rounded-lg h-9 px-3 outline-none"
         />
-        <button className="bg-gray-950 h-9 px-8 rounded-lg text-white font-medium text-lg hover:bg-yellow-500 hover:text-black">
+        <button className="bg-gray-950 h-9 px-8 rounded-lg text-white font-medium text-lg hover:bg-yellow-500 hover:text-black transition-all">
           Buscar
         </button>
       </section>
