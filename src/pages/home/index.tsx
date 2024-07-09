@@ -18,6 +18,7 @@ export interface AcademiaProps {
   horariosabadoeferiado: string;
   horariodomingo: string;
   imagens: string[];
+  distancia: string;
 }
 
 export function Home() {

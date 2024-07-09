@@ -20,8 +20,10 @@
         "https://pictures.smartfit.com.br/10060/big/oscar-freire-1.jpeg?1653349477",
         "https://pictures.smartfit.com.br/10023/big/smart-fit-academia-unidade-alameda_santos-sp-1-equipamentos-area-cardiovascular-esteira.jpeg?1653347414",
         "https://pictures.smartfit.com.br/12795/big/DSC_2691.jpg?1703614509"
-      ]
+      ],
+      "distancia": "320"
     },
+
     {
       "id": 2,
       "name": "GM Fit 2",
@@ -41,7 +43,8 @@
         "https://pictures.smartfit.com.br/10060/big/oscar-freire-1.jpeg?1653349477",
         "https://pictures.smartfit.com.br/10023/big/smart-fit-academia-unidade-alameda_santos-sp-1-equipamentos-area-cardiovascular-esteira.jpeg?1653347414",
         "https://pictures.smartfit.com.br/12795/big/DSC_2691.jpg?1703614509"
-      ]
+      ],
+      "distancia": "410"
     },
     {
       "id": 3,
@@ -61,7 +64,8 @@
         "https://pictures.smartfit.com.br/10060/big/oscar-freire-1.jpeg?1653349477",
         "https://pictures.smartfit.com.br/10023/big/smart-fit-academia-unidade-alameda_santos-sp-1-equipamentos-area-cardiovascular-esteira.jpeg?1653347414",
         "https://pictures.smartfit.com.br/12795/big/DSC_2691.jpg?1703614509"
-      ]
+      ],
+      "distancia": "900"
     },
     {
       "id": 4,
@@ -83,7 +87,8 @@
         "https://pictures.smartfit.com.br/10072/big/smart_fit-consolacao_II-_0005_3.jpg?1643286535",
         "https://pictures.smartfit.com.br/10023/big/smart-fit-academia-unidade-alameda_santos-sp-1-equipamentos-area-cardiovascular-esteira.jpeg?1653347414",
         "https://pictures.smartfit.com.br/12795/big/DSC_2691.jpg?1703614509"
-      ]
+      ],
+      "distancia": "1000"
     },
     {
       "id": 5,
@@ -103,7 +108,8 @@
         "https://pictures.smartfit.com.br/10023/big/smart-fit-academia-unidade-alameda_santos-sp-1-equipamentos-area-cardiovascular-esteira.jpeg?1653347414",
         "https://pictures.smartfit.com.br/12795/big/DSC_2691.jpg?1703614509",
         "https://pictures.smartfit.com.br/10042/big/smart-fit-academia-unidade-baixo_augusta-sp-1-equipamento-area-cardiovascular-eliptico.jpeg?1653331645"
-      ]
+      ],
+      "distancia": "1150"
     },
     {
       "id": 6,
@@ -124,7 +130,8 @@
         "https://pictures.smartfit.com.br/12795/big/DSC_2691.jpg?1703614509",
         "https://pictures.smartfit.com.br/10042/big/smart-fit-academia-unidade-baixo_augusta-sp-1-equipamento-area-cardiovascular-eliptico.jpeg?1653331645",
         "https://pictures.smartfit.com.br/12736/big/DSC_5711.jpg?1703022612"
-      ]
+      ],
+      "distancia": "650"
     }
   ]
 }

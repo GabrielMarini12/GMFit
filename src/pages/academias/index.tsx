@@ -64,7 +64,7 @@ export function Academias() {
               navigation
             >
               {academia.imagens.map((imagem) => (
-                <SwiperSlide key={imagem} className="pl-1 pr-1">
+                <SwiperSlide key={imagem} className="pl-1 pr-1 mb-2">
                   <img
                     className="w-full rounded-lg mb-8 max-h-fit shadow-lg shadow-slate-300 z-0"
                     src={imagem}
@@ -199,7 +199,7 @@ export function Academias() {
             navigation
           >
             {academias.map((academia) => (
-              <SwiperSlide key={academia.id} className="pl-3 pr-3">
+              <SwiperSlide key={academia.id} className="pl-3 pr-3 mb-10">
                 <div className="bg-white rounded-lg mt-4 h-64 relative">
                   <Link to={`/academias/${academia.id}`}>
                     <img
@@ -212,8 +212,8 @@ export function Academias() {
                   <p className="pb-2 text-sm text-gray-500 px-3 mt-1">
                     {academia.address}
                   </p>
-                  <p className="absolute bg-white text-gray-500 py-1 px-2 rounded-full top-1 left-1 text-sm">
-                    500m
+                  <p className="absolute bg-white text-gray-500 py-1 px-2 rounded-full top-1 left-1 text-xs">
+                    {academia.distancia}m
                   </p>
                 </div>
               </SwiperSlide>
