@@ -23,6 +23,8 @@ export interface AcademiaProps {
 
 export function Home() {
   const [academias, setAcademias] = useState<AcademiaProps[]>([]);
+  const [input, setInput] = useState("");
+  const listacademia = [] as AcademiaProps[];
 
   useEffect(() => {
     async function getAcademias() {
@@ -33,14 +35,52 @@ export function Home() {
     getAcademias();
   }, []);
 
+  async function handleSearchAcademia() {
+    if (input === "") {
+      const resposta = await api.get("/academias");
+      setAcademias(resposta.data);
+      return;
+    }
+
+    academias.map((academia) => {
+      if (input.toUpperCase() === academia.name.toUpperCase()) {
+        listacademia.push({
+          id: academia.id,
+          name: academia.name,
+          address: academia.address,
+          smart: academia.smart,
+          black: academia.black,
+          fit: academia.fit,
+          promotion: academia.promotion,
+          cover: academia.cover,
+          mapa: academia.mapa,
+          horariosegundaasexta: academia.horariosegundaasexta,
+          horariosabadoeferiado: academia.horariosabadoeferiado,
+          horariodomingo: academia.horariodomingo,
+          imagens: academia.imagens,
+          distancia: academia.distancia,
+        });
+      }
+    });
+
+    console.log(listacademia);
+    setAcademias(listacademia);
+    setInput("");
+  }
+
   return (
     <Container>
       <section className="bg-white p-4 rounded-lg w-full max-w-3xl mx-auto flex justify-center items-center gap-2">
         <input
-          placeholder="Digite aqui a cidade..."
+          placeholder="Digite o nome da academia..."
           className="w-full border-2 rounded-lg h-9 px-3 outline-none"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
         />
-        <button className="bg-gray-950 h-9 px-8 rounded-lg text-white font-medium text-lg hover:bg-yellow-500 hover:text-black transition-all">
+        <button
+          className="bg-gray-950 h-9 px-8 rounded-lg text-white font-medium text-lg hover:bg-yellow-500 hover:text-black transition-all"
+          onClick={handleSearchAcademia}
+        >
           Buscar
         </button>
       </section>
@@ -56,7 +96,7 @@ export function Home() {
             className="w-full mb-4 bg-white rounded-lg shadow-lg shadow-slate-300 hover:shadow-slate-400"
           >
             <img
-              className="w-full rounded-tr-lg rounded-tl-lg mb-2 max-h-48"
+              className="w-full rounded-tr-lg rounded-tl-lg mb-2 max-h-48 object-cover"
               src={academia.cover}
             />
             <p className="font-bold text-2xl mt-1 px-4">{academia.name}</p>
