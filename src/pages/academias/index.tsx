@@ -152,7 +152,7 @@ export function Academias() {
         <h1 className="text-4xl font-medium">
           Conheça <span className="text-yellow-500 font-bold">a equipe</span>
         </h1>
-        <p className="mt-4 w-2/3 text-gray-600 flex justify-center items-center">
+        <p className="mt-4 w-2/3 text-gray-600 flex justify-center items-center text-center">
           É bom contar com essa galera para tirar dúvidas, treinar pra valer,
           bater um papinho...
         </p>
