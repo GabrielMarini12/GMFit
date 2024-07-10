@@ -14,6 +14,7 @@ export function Academias() {
   const [academia, setAcademia] = useState<AcademiaProps>();
   const [academias, setAcademias] = useState<AcademiaProps[]>([]);
   const [sliderPreView, setSliderPreView] = useState<number>(4);
+  const [loadImages, setLoadImages] = useState<string[]>([]);
 
   useEffect(() => {
     async function getAcademias() {
@@ -55,6 +56,10 @@ export function Academias() {
     window.scrollTo(0, 0);
   }
 
+  function handleImageLoad(id: string) {
+    setLoadImages((prevImageLoaded) => [...prevImageLoaded, id]);
+  }
+
   return (
     <Container>
       <main className="grid grid-cols-1 gap-6 lg:grid-cols-2">
@@ -69,9 +74,23 @@ export function Academias() {
             >
               {academia.imagens.map((imagem) => (
                 <SwiperSlide key={imagem} className="pl-1 pr-1 mb-2">
+                  <div
+                    className="w-full h-72 rounded-lg bg-slate-200"
+                    style={{
+                      display: loadImages.includes(academia.id)
+                        ? "none"
+                        : "block",
+                    }}
+                  ></div>
                   <img
                     className="w-full rounded-lg mb-8 max-h-fit shadow-lg shadow-slate-300 z-0"
                     src={imagem}
+                    onLoad={() => handleImageLoad(academia.id)}
+                    style={{
+                      display: loadImages.includes(academia.id)
+                        ? "block"
+                        : "none",
+                    }}
                   />
                 </SwiperSlide>
               ))}
@@ -206,10 +225,24 @@ export function Academias() {
               <SwiperSlide key={academia.id} className="pl-3 pr-3 mb-10">
                 <div className="bg-white rounded-lg mt-4 h-64 relative">
                   <Link to={`/academias/${academia.id}`}>
+                    <div
+                      className="w-full h-40 rounded-tr-lg rounded-tl-lg bg-slate-200"
+                      style={{
+                        display: loadImages.includes(academia.id)
+                          ? "none"
+                          : "block",
+                      }}
+                    ></div>
                     <img
                       className="w-full rounded-tr-lg rounded-tl-lg mb-2 max-h-40 object-cover "
                       src={academia.cover}
                       onClick={handleScroll}
+                      onLoad={() => handleImageLoad(academia.id)}
+                      style={{
+                        display: loadImages.includes(academia.id)
+                          ? "block"
+                          : "none",
+                      }}
                     />
                   </Link>
 
