@@ -1,4 +1,5 @@
 import { Container } from "../../components/container";
+import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 
 export function Planos() {
   return (
@@ -21,7 +22,7 @@ export function Planos() {
           Os valores apresentados abaixo são promocionais. Aproveite!
         </p>
 
-        <table className="w-full border-2 border-black mt-8 text-center">
+        <table className="w-full  mt-8 text-center">
           <tr className="grid grid-cols-4 mb-6 border-b-2 h-32 items-center">
             <td></td>
             <td className="text-xl">
@@ -44,40 +45,84 @@ export function Planos() {
             </td>
           </tr>
           <tr className="grid grid-cols-4 mb-4 border-b-2 h-12 items-center">
-            <td>Acesso ilimitado a +1.400 academias da rede</td>
-            <td>22</td>
-            <td>Estudante</td>
-            <td>Estudante</td>
+            <td className="text-start text-gray-800">
+              Acesso ilimitado a +1.400 academias da rede
+            </td>
+            <td className="flex justify-center items-center">
+              <FaCheckCircle size={28} color="#21d439" />
+            </td>
+            <td className="flex justify-center items-center">
+              <FaTimesCircle size={28} color="#c4c4c4" />
+            </td>
+            <td className="flex justify-center items-center">
+              <FaTimesCircle size={28} color="#c4c4c4" />
+            </td>
           </tr>
           <tr className="grid grid-cols-4 mb-4 border-b-2 h-12 items-center">
-            <td>Leve 5 amigos por mês para treinar com você</td>
-            <td>26</td>
-            <td>Designer</td>
-            <td>Designer</td>
+            <td className="text-start text-gray-800">
+              Leve 5 amigos por mês para treinar com você
+            </td>
+            <td className="flex justify-center items-center">
+              <FaCheckCircle size={28} color="#21d439" />
+            </td>
+            <td className="flex justify-center items-center">
+              <FaTimesCircle size={28} color="#c4c4c4" />
+            </td>
+            <td className="flex justify-center items-center">
+              <FaTimesCircle size={28} color="#c4c4c4" />
+            </td>
           </tr>
           <tr className="grid grid-cols-4 mb-4 border-b-2 h-12 items-center">
-            <td>Cadeira de massagem</td>
-            <td>26</td>
-            <td>Designer</td>
-            <td>Designer</td>
+            <td className="text-start text-gray-800">Cadeira de massagem</td>
+            <td className="flex justify-center items-center">
+              <FaCheckCircle size={28} color="#21d439" />
+            </td>
+            <td className="flex justify-center items-center">
+              <FaTimesCircle size={28} color="#c4c4c4" />
+            </td>
+            <td className="flex justify-center items-center">
+              <FaTimesCircle size={28} color="#c4c4c4" />
+            </td>
           </tr>
           <tr className="grid grid-cols-4 mb-4 border-b-2 h-12 items-center">
-            <td>GM Fit GO (treinos online) no app</td>
-            <td>26</td>
-            <td>Designer</td>
-            <td>Designer</td>
+            <td className="text-start text-gray-800">
+              GM Fit GO (treinos online) no app
+            </td>
+            <td className="flex justify-center items-center">
+              <FaCheckCircle size={28} color="#21d439" />
+            </td>
+            <td className="flex justify-center items-center">
+              <FaCheckCircle size={28} color="#21d439" />
+            </td>
+            <td className="flex justify-center items-center">
+              <FaCheckCircle size={28} color="#21d439" />
+            </td>
           </tr>
           <tr className="grid grid-cols-4 mb-4 border-b-2 h-12 items-center">
-            <td>Área de musculação e aeróbicos</td>
-            <td>26</td>
-            <td>Designer</td>
-            <td>Designer</td>
+            <td className="text-start text-gray-800">
+              Área de musculação e aeróbicos
+            </td>
+            <td className="flex justify-center items-center">
+              <FaCheckCircle size={28} color="#21d439" />
+            </td>
+            <td className="flex justify-center items-center">
+              <FaCheckCircle size={28} color="#21d439" />
+            </td>
+            <td className="flex justify-center items-center">
+              <FaCheckCircle size={28} color="#21d439" />
+            </td>
           </tr>
           <tr className="grid grid-cols-4 mb-4 border-b-2 h-12 items-center">
-            <td>GM Fit App</td>
-            <td>26</td>
-            <td>Designer</td>
-            <td>Designer</td>
+            <td className="text-start text-gray-800">GM Fit App</td>
+            <td className="flex justify-center items-center">
+              <FaCheckCircle size={28} color="#21d439" />
+            </td>
+            <td className="flex justify-center items-center">
+              <FaCheckCircle size={28} color="#21d439" />
+            </td>
+            <td className="flex justify-center items-center">
+              <FaCheckCircle size={28} color="#21d439" />
+            </td>
           </tr>
           <tr className="grid grid-cols-4 mb-6  h-32 items-center">
             <td></td>
