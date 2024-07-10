@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { api } from "../../services/api";
 
 export interface AcademiaProps {
-  id: number;
+  id: string;
   name: string;
   address: string;
   smart: number;
@@ -25,6 +25,7 @@ export function Home() {
   const [academias, setAcademias] = useState<AcademiaProps[]>([]);
   const [input, setInput] = useState("");
   const listacademia = [] as AcademiaProps[];
+  const [loadImages, setLoadImages] = useState<string[]>([]);
 
   useEffect(() => {
     async function getAcademias() {
@@ -34,6 +35,10 @@ export function Home() {
 
     getAcademias();
   }, []);
+
+  function handleImageLoad(id: string) {
+    setLoadImages((prevImageLoaded) => [...prevImageLoaded, id]);
+  }
 
   async function handleSearchAcademia() {
     if (input === "") {
@@ -95,9 +100,19 @@ export function Home() {
             key={academia.id}
             className="w-full mb-4 bg-white rounded-lg shadow-lg shadow-slate-300 hover:shadow-slate-400"
           >
+            <div
+              className="w-full h-48 rounded-tr-lg rounded-tl-lg bg-slate-200"
+              style={{
+                display: loadImages.includes(academia.id) ? "none" : "block",
+              }}
+            ></div>
             <img
               className="w-full rounded-tr-lg rounded-tl-lg mb-2 max-h-48 object-cover"
               src={academia.cover}
+              onLoad={() => handleImageLoad(academia.id)}
+              style={{
+                display: loadImages.includes(academia.id) ? "block" : "none",
+              }}
             />
             <p className="font-bold text-2xl mt-1 px-4">{academia.name}</p>
             <small className="px-4 text-slate-400">{academia.address}</small>
