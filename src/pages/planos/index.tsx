@@ -27,7 +27,7 @@ export function Planos() {
             <td className="text-xl">
               Plano <span className="font-bold">Black</span>
               <p className="text-xs text-gray-500 mt-1">
-                Treine em mais de 1.400 academias Smart Fit!
+                Treine em mais de 1.400 academias GM Fit!
               </p>
             </td>
             <td className="text-xl">
