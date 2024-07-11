@@ -4,6 +4,7 @@ import { Login } from "./pages/login";
 import { Registro } from "./pages/register";
 import { Academias } from "./pages/academias";
 import { Planos } from "./pages/planos";
+import { Checkout } from "./pages/checkout";
 
 import { Layout } from "./components/layout";
 import { Private } from "./routes/Private";
@@ -29,6 +30,14 @@ const router = createBrowserRouter([
         element: (
           <Private>
             <Academias />
+          </Private>
+        ),
+      },
+      {
+        path: "/checkout/:id",
+        element: (
+          <Private>
+            <Checkout />
           </Private>
         ),
       },
