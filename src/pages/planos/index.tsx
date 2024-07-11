@@ -18,14 +18,18 @@ export function Planos() {
           </span>
         </h1>
 
-        <p className="mt-4 w-2/3 text-gray-600 flex justify-center items-center text-center">
+        <p className="mt-4 w-2/3 text-gray-600 flex justify-center items-center text-center mb-6">
           Os valores apresentados abaixo são promocionais. Aproveite!
         </p>
 
-        <table className="w-full  mt-8 text-center">
+        <table className="w-full  mt-8 text-center relative">
+          <p className="absolute -top-4 rounded-lg left-96 bg-yellow-500 px-4 py-1 z-10 max-xl:hidden">
+            O mais <span className="font-bold">vantajoso</span>
+          </p>
+          <div className="absolute border-2 rounded-xl border-yellow-500 h-full w-72 left-80 max-xl:hidden"></div>
           <tr className="grid grid-cols-4 mb-6 border-b-2 h-32 max-sm:h-44 items-center">
             <td></td>
-            <td className="text-xl">
+            <td className="text-xl ">
               Plano <span className="font-bold">Black</span>
               <p className="text-xs text-gray-500 mt-1 max-sm:hidden">
                 Treine em mais de 1.400 academias GM Fit!
