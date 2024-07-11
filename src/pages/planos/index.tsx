@@ -168,6 +168,10 @@ export function Planos() {
             </td>
           </tr>
         </table>
+
+        <button className="p-3 mb-6 bg-red-600 w-2/3 text-white rounded-full font-medium text-lg mt-10 cursor-pointer hover:bg-red-700 transition-all max-sm:mt-0">
+          Fazer matrícula
+        </button>
       </div>
     </Container>
   );
