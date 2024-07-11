@@ -23,28 +23,28 @@ export function Planos() {
         </p>
 
         <table className="w-full  mt-8 text-center">
-          <tr className="grid grid-cols-4 mb-6 border-b-2 h-32 items-center">
+          <tr className="grid grid-cols-4 mb-6 border-b-2 h-32 max-sm:h-44 items-center">
             <td></td>
             <td className="text-xl">
               Plano <span className="font-bold">Black</span>
-              <p className="text-xs text-gray-500 mt-1">
+              <p className="text-xs text-gray-500 mt-1 max-sm:hidden">
                 Treine em mais de 1.400 academias GM Fit!
               </p>
             </td>
             <td className="text-xl">
               Plano <span className="font-bold">Fit</span>
-              <p className="text-xs text-gray-500 mt-1">
+              <p className="text-xs text-gray-500 mt-1 max-sm:hidden">
                 Pague menos para treinar o quanto quiser na sua unidade.
               </p>
             </td>
             <td className="text-xl">
               Plano <span className="font-bold"> Smart</span>
-              <p className="text-xs text-gray-500 mt-1">
+              <p className="text-xs text-gray-500 mt-1 max-sm:hidden">
                 Treine quando quiser na sua unidade
               </p>
             </td>
           </tr>
-          <tr className="grid grid-cols-4 mb-4 border-b-2 h-12 items-center">
+          <tr className="grid grid-cols-4 mb-4 border-b-2 h-12 max-sm:h-36 items-center">
             <td className="text-start text-gray-800">
               Acesso ilimitado a +1.400 academias da rede
             </td>
@@ -58,7 +58,7 @@ export function Planos() {
               <FaTimesCircle size={28} color="#c4c4c4" />
             </td>
           </tr>
-          <tr className="grid grid-cols-4 mb-4 border-b-2 h-12 items-center">
+          <tr className="grid grid-cols-4 mb-4 border-b-2 h-12 max-sm:h-36 items-center">
             <td className="text-start text-gray-800">
               Leve 5 amigos por mês para treinar com você
             </td>
@@ -72,7 +72,7 @@ export function Planos() {
               <FaTimesCircle size={28} color="#c4c4c4" />
             </td>
           </tr>
-          <tr className="grid grid-cols-4 mb-4 border-b-2 h-12 items-center">
+          <tr className="grid grid-cols-4 mb-4 border-b-2 h-12 max-sm:h-36 items-center">
             <td className="text-start text-gray-800">Cadeira de massagem</td>
             <td className="flex justify-center items-center">
               <FaCheckCircle size={28} color="#21d439" />
@@ -84,7 +84,7 @@ export function Planos() {
               <FaTimesCircle size={28} color="#c4c4c4" />
             </td>
           </tr>
-          <tr className="grid grid-cols-4 mb-4 border-b-2 h-12 items-center">
+          <tr className="grid grid-cols-4 mb-4 border-b-2 h-12 max-sm:h-36 items-center">
             <td className="text-start text-gray-800">
               GM Fit GO (treinos online) no app
             </td>
@@ -98,7 +98,7 @@ export function Planos() {
               <FaCheckCircle size={28} color="#21d439" />
             </td>
           </tr>
-          <tr className="grid grid-cols-4 mb-4 border-b-2 h-12 items-center">
+          <tr className="grid grid-cols-4 mb-4 border-b-2 h-12 max-sm:h-36 items-center">
             <td className="text-start text-gray-800">
               Área de musculação e aeróbicos
             </td>
@@ -112,7 +112,7 @@ export function Planos() {
               <FaCheckCircle size={28} color="#21d439" />
             </td>
           </tr>
-          <tr className="grid grid-cols-4 mb-4 border-b-2 h-12 items-center">
+          <tr className="grid grid-cols-4 mb-4 border-b-2 h-12 max-sm:h-36 items-center">
             <td className="text-start text-gray-800">GM Fit App</td>
             <td className="flex justify-center items-center">
               <FaCheckCircle size={28} color="#21d439" />
@@ -124,7 +124,7 @@ export function Planos() {
               <FaCheckCircle size={28} color="#21d439" />
             </td>
           </tr>
-          <tr className="grid grid-cols-4 mb-6  h-32 items-center">
+          <tr className="grid grid-cols-4 mb-6 h-32 max-sm:h-44 items-center">
             <td></td>
             <td className="text-xl">
               <span className="font-bold">R$ 9,90*</span>
@@ -132,7 +132,7 @@ export function Planos() {
                 <span className="text-black font-medium">no 1º mês</span>,
                 depois R$ 139,90 /mês
               </p>
-              <p className="text-xs text-gray-400 pt-1">
+              <p className="text-xs text-gray-400 pt-1 max-sm:hidden">
                 12 meses de fidelidade
               </p>
             </td>
@@ -142,10 +142,12 @@ export function Planos() {
                 <span className="text-black font-medium">no 1º mês</span>,
                 depois R$ 129,90 /mês
               </p>
-              <p className="text-xs text-gray-400 pt-1">
+              <p className="text-xs text-gray-400 pt-1 max-sm:hidden">
                 12 meses de fidelidade
               </p>
-              <p className="text-xs text-gray-400 pt-1">Adesão R$ 49,90</p>
+              <p className="text-xs text-gray-400 pt-1 max-sm:hidden">
+                Adesão R$ 49,90
+              </p>
             </td>
             <td className="text-xl">
               <span className="font-bold">R$ 9,90*</span>
@@ -153,10 +155,12 @@ export function Planos() {
                 <span className="text-black font-medium">no 1º mês</span>,
                 depois R$ 149,90 /mês
               </p>
-              <p className="text-xs text-gray-400 pt-1">
+              <p className="text-xs text-gray-400 pt-1 max-sm:hidden">
                 12 meses de fidelidade
               </p>
-              <p className="text-xs text-gray-400 pt-1">Adesão R$ 49,90</p>
+              <p className="text-xs text-gray-400 pt-1 max-sm:hidden">
+                Adesão R$ 49,90
+              </p>
             </td>
           </tr>
         </table>
