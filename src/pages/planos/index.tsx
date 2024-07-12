@@ -145,20 +145,20 @@ export function Planos() {
             <tr className="grid grid-cols-4 mb-6 h-32 max-sm:h-44 items-center">
               <td></td>
               <td className="text-xl">
-                <span className="font-bold">R$ 9,90*</span>
+                <span className="font-bold">R$ {academia.promotion}*</span>
                 <p className="text-sm text-gray-500 mt-1">
                   <span className="text-black font-medium">no 1º mês</span>,
-                  depois R$ 139,90 /mês
+                  depois R$ {academia.black} /mês
                 </p>
                 <p className="text-xs text-gray-400 pt-1 max-sm:hidden">
                   12 meses de fidelidade
                 </p>
               </td>
               <td className="text-xl">
-                <span className="font-bold">R$ 9,90*</span>
+                <span className="font-bold">R$ {academia.promotion}*</span>
                 <p className="text-sm text-gray-500 mt-1">
                   <span className="text-black font-medium">no 1º mês</span>,
-                  depois R$ 129,90 /mês
+                  depois R$ {academia.fit} /mês
                 </p>
                 <p className="text-xs text-gray-400 pt-1 max-sm:hidden">
                   12 meses de fidelidade
@@ -168,10 +168,10 @@ export function Planos() {
                 </p>
               </td>
               <td className="text-xl">
-                <span className="font-bold">R$ 9,90*</span>
+                <span className="font-bold">R$ {academia.promotion}*</span>
                 <p className="text-sm text-gray-500 mt-1">
                   <span className="text-black font-medium">no 1º mês</span>,
-                  depois R$ 149,90 /mês
+                  depois R$ {academia.smart} /mês
                 </p>
                 <p className="text-xs text-gray-400 pt-1 max-sm:hidden">
                   12 meses de fidelidade
