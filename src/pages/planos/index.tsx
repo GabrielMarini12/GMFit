@@ -182,17 +182,15 @@ export function Planos() {
               </td>
             </tr>
           </table>
-        </div>
-      )}
-
-      {academia && (
-        <section className="flex justify-center items-center">
-          <Link to={`/checkout/${id}`}>
-            <button className="p-3 mb-6 bg-red-600 w-2/3 text-white rounded-full font-medium text-lg mt-10 cursor-pointer hover:bg-red-700 transition-all max-sm:mt-0">
+          <Link
+            to={`/checkout/${id}`}
+            className="w-full flex justify-center items-center"
+          >
+            <button className="w-2/3 max-sm:w-full p-3 mb-6 bg-red-600 text-white rounded-full font-medium text-lg mt-10 cursor-pointer hover:bg-red-700 transition-all max-sm:mt-0">
               Fazer matrícula
             </button>
           </Link>
-        </section>
+        </div>
       )}
     </Container>
   );
