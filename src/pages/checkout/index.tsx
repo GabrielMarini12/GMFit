@@ -8,7 +8,7 @@ export function Checkout() {
           <h1 className="font-bold text-4xl uppercase mb-12">
             Escolha o plano mais vantajoso para você:
           </h1>
-          <div className="w-full flex flex-col bg-black px-3 py-12 text-white rounded-lg mb-8 border border-black">
+          <div className="w-full flex flex-col bg-black px-3 py-12 text-white rounded-lg mb-8 border border-black shadow-md shadow-slate-300">
             <div className="grid grid-cols-4 items-center text-center mb-8">
               <div className="flex justify-center items-center">
                 <button className="border border-white h-3 p-2 mr-4 rounded-sm"></button>
@@ -43,7 +43,7 @@ export function Checkout() {
             </div>
           </div>
 
-          <div className="w-full flex flex-col bg-slate-100 px-3 py-12 text-black rounded-lg mb-8 border border-gray-300">
+          <div className="w-full flex flex-col bg-slate-100 px-3 py-12 text-black rounded-lg mb-8 border border-gray-300 shadow-md shadow-slate-300">
             <div className="grid grid-cols-4 items-center text-center mb-8">
               <div className="flex justify-center items-center">
                 <button className="border border-black h-3 p-2 mr-4 rounded-sm"></button>
@@ -78,7 +78,7 @@ export function Checkout() {
             </div>
           </div>
 
-          <div className="w-full flex flex-col bg-slate-100 px-3 py-12 text-black rounded-lg mb-8 border border-gray-300">
+          <div className="w-full flex flex-col bg-slate-100 px-3 py-12 text-black rounded-lg mb-8 border border-gray-300 shadow-md shadow-slate-300">
             <div className="grid grid-cols-4 items-center text-center mb-8">
               <div className="flex justify-center items-center">
                 <button className="border border-black h-3 p-2 mr-4 rounded-sm"></button>
@@ -114,13 +114,99 @@ export function Checkout() {
           </div>
         </div>
 
-        <div className="max-w-[40%] bg-slate-200 py-4 px-16 flex flex-col">
-          <p className="font-medium text-2xl mb-2 text-left">
+        <div className="w-[40%] ml-20 bg-slate-200 py-8 px-6 flex flex-col rounded-lg  shadow-md shadow-slate-300 mb-8">
+          <p className="font-bold text-2xl mb-2 text-left">
             Detalhes da compra
           </p>
-          <p>
-            Academia escolhida: <span className="font-medium">GM Fit 1</span>
+          <p className="text-sm">
+            Academia escolhida:{" "}
+            <span className="font-medium text-base">GM Fit 1</span>
           </p>
+          <div className="w-full border border-gray-300 mt-6 mb-12"></div>
+
+          <div className="w-[90%] flex flex-col mx-auto gap-4 border border-gray-300 bg-white py-6 px-6 rounded-lg">
+            <div className="flex justify-between">
+              <p className="uppercase text-xs font-bold">1ª cobrança</p>
+              <p className="font-bold text-sm">R$ 9,90</p>
+            </div>
+
+            <div className="w-full border border-gray-200"></div>
+
+            <div className="flex justify-between">
+              <p className="uppercase text-xs font-bold">2ª cobrança</p>
+              <p className="font-bold text-sm">R$ 9,90</p>
+            </div>
+
+            <div className="w-full border border-gray-200"></div>
+
+            <div className="flex justify-between">
+              <p className="uppercase text-xs font-bold">3ª cobrança</p>
+              <p className="font-bold text-sm">R$ 9,90</p>
+            </div>
+
+            <div className="w-full border border-gray-200"></div>
+
+            <div className="flex justify-between">
+              <p className="uppercase text-xs font-bold">4ª cobrança</p>
+              <p className="font-bold text-sm">R$ 9,90</p>
+            </div>
+
+            <div className="w-full border border-gray-200"></div>
+
+            <div className="flex justify-between">
+              <p className="uppercase text-xs font-bold">5ª cobrança</p>
+              <p className="font-bold text-sm">R$ 9,90</p>
+            </div>
+
+            <div className="w-full border border-gray-200"></div>
+
+            <div className="flex justify-between">
+              <p className="uppercase text-xs font-bold">6ª cobrança</p>
+              <p className="font-bold text-sm">R$ 9,90</p>
+            </div>
+
+            <div className="w-full border border-gray-200"></div>
+
+            <div className="flex justify-between">
+              <p className="uppercase text-xs font-bold">7ª cobrança</p>
+              <p className="font-bold text-sm">R$ 9,90</p>
+            </div>
+
+            <div className="w-full border border-gray-200"></div>
+
+            <div className="flex justify-between">
+              <p className="uppercase text-xs font-bold">8ª cobrança</p>
+              <p className="font-bold text-sm">R$ 9,90</p>
+            </div>
+
+            <div className="w-full border border-gray-200"></div>
+
+            <div className="flex justify-between">
+              <p className="uppercase text-xs font-bold">9ª cobrança</p>
+              <p className="font-bold text-sm">R$ 9,90</p>
+            </div>
+
+            <div className="w-full border border-gray-200"></div>
+
+            <div className="flex justify-between">
+              <p className="uppercase text-xs font-bold">10ª cobrança</p>
+              <p className="font-bold text-sm">R$ 9,90</p>
+            </div>
+
+            <div className="w-full border border-gray-200"></div>
+
+            <div className="flex justify-between">
+              <p className="uppercase text-xs font-bold">11ª cobrança</p>
+              <p className="font-bold text-sm">R$ 9,90</p>
+            </div>
+
+            <div className="w-full border border-gray-200"></div>
+
+            <div className="flex justify-between">
+              <p className="uppercase text-xs font-bold">12ª cobrança</p>
+              <p className="font-bold text-sm">R$ 9,90</p>
+            </div>
+          </div>
         </div>
       </section>
     </Container>
