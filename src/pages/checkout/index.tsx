@@ -3,21 +3,37 @@ import { Container } from "../../components/container";
 export function Checkout() {
   return (
     <Container>
-      <section className="flex w-full justify-between">
-        <div className="max-w-[60%] flex flex-col">
+      <section className="flex w-full justify-between max-lg:flex-col">
+        <div className="max-w-[60%] flex flex-col max-lg:max-w-full">
           <h1 className="font-bold text-4xl uppercase mb-12">
             Escolha o plano mais vantajoso para você:
           </h1>
           <div className="w-full flex flex-col bg-black px-3 py-12 text-white rounded-lg mb-10 border border-black shadow-md shadow-slate-300">
-            <div className="grid grid-cols-4 items-center text-center mb-8">
+            <div className="grid grid-cols-4 max-sm:grid-cols-2 items-center text-center mb-8 relative">
+              <div className="absolute bg-yellow-500 -top-9 -right-4 pl-8 pr-4 rounded-r-sm ">
+                <p className="uppercase text-black font-bold">
+                  O mais vantajoso
+                </p>
+              </div>
+              <div className="bg-black absolute w-5 h-5 top-[-34px] right-44 rotate-45"></div>
               <div className="flex justify-center items-center">
-                <button className="border border-white h-3 p-2 mr-4 rounded-sm"></button>
+                <input
+                  type="checkbox"
+                  className="peer hidden"
+                  id="checked-black"
+                  name="filtro"
+                  checked
+                />
+                <label
+                  htmlFor="checked-black"
+                  className=" peer-checked:bg-yellow-500 border border-white h-3 p-2 mr-4 rounded-sm cursor-pointer"
+                ></label>
                 <p className="uppercase text-lg font-bold ">Plano black</p>
               </div>
-              <p>
+              <p className="max-sm:hidden">
                 Adesão <br /> <span className="font-bold">Zero</span>
               </p>
-              <p>
+              <p className="max-sm:hidden">
                 Fidelidade <br /> <span className="font-bold">12 meses</span>
               </p>
               <div className="flex flex-col items-start pl-10">
@@ -37,22 +53,31 @@ export function Checkout() {
             </div>
 
             <div className="grid grid-cols-1 text-left pl-12 -mt-14">
-              <p className="font-bold text-sm">
+              <p className="font-bold text-sm max-sm:hidden">
                 Treine em mais de 1.400 academias Smart Fit!
               </p>
             </div>
           </div>
 
           <div className="w-full flex flex-col bg-slate-100 px-3 py-12 text-black rounded-lg mb-10 border border-gray-300 shadow-md shadow-slate-300">
-            <div className="grid grid-cols-4 items-center text-center mb-8">
+            <div className="grid grid-cols-4 max-sm:grid-cols-2 items-center text-center mb-8">
               <div className="flex justify-center items-center">
-                <button className="border border-black h-3 p-2 mr-4 rounded-sm"></button>
+                <input
+                  type="checkbox"
+                  className="peer hidden"
+                  id="checked-fit"
+                  name="filtro"
+                />
+                <label
+                  htmlFor="checked-fit"
+                  className=" peer-checked:bg-yellow-500 border border-black h-3 p-2 mr-4 rounded-sm cursor-pointer"
+                ></label>
                 <p className="uppercase text-lg font-bold ">Plano fitnes</p>
               </div>
-              <p>
+              <p className="max-sm:hidden">
                 Adesão <br /> <span className="font-bold">Zero</span>
               </p>
-              <p>
+              <p className="max-sm:hidden">
                 Fidelidade <br /> <span className="font-bold">12 meses</span>
               </p>
               <div className="flex flex-col items-start pl-10">
@@ -72,22 +97,31 @@ export function Checkout() {
             </div>
 
             <div className="grid grid-cols-1 text-left pl-12 -mt-14">
-              <p className="font-bold text-sm">
+              <p className="font-bold text-sm max-sm:hidden">
                 Pague menos para treinar o quanto quiser na sua unidade.
               </p>
             </div>
           </div>
 
           <div className="w-full flex flex-col bg-slate-100 px-3 py-12 text-black rounded-lg mb-10 border border-gray-300 shadow-md shadow-slate-300">
-            <div className="grid grid-cols-4 items-center text-center mb-8">
+            <div className="grid grid-cols-4 max-sm:grid-cols-2 items-center text-center mb-8">
               <div className="flex justify-center items-center">
-                <button className="border border-black h-3 p-2 mr-4 rounded-sm"></button>
+                <input
+                  type="checkbox"
+                  className="peer hidden"
+                  id="checked-smart"
+                  name="filtro"
+                />
+                <label
+                  htmlFor="checked-smart"
+                  className=" peer-checked:bg-yellow-500 border border-black h-3 p-2 mr-4 rounded-sm cursor-pointer"
+                ></label>
                 <p className="uppercase text-lg font-bold ">Plano smart</p>
               </div>
-              <p>
+              <p className="max-sm:hidden">
                 Adesão <br /> <span className="font-bold">Zero</span>
               </p>
-              <p>
+              <p className="max-sm:hidden">
                 Fidelidade <br /> <span className="font-bold">12 meses</span>
               </p>
               <div className="flex flex-col items-start pl-10">
@@ -107,14 +141,14 @@ export function Checkout() {
             </div>
 
             <div className="grid grid-cols-1 text-left pl-12 -mt-14">
-              <p className="font-bold text-sm">
+              <p className="font-bold text-sm max-sm:hidden">
                 Treine quando quiser na sua unidade.
               </p>
             </div>
           </div>
         </div>
 
-        <div className="w-[40%] h-full ml-20 bg-slate-200 py-8 px-6 flex flex-col rounded-lg  shadow-md shadow-slate-300 mb-8">
+        <div className="w-[40%] max-lg:w-full h-full ml-20 max-lg:ml-0 bg-slate-200 py-8 px-6 flex flex-col rounded-lg  shadow-md shadow-slate-300 mb-8">
           <p className="font-bold text-2xl mb-2 text-left">
             Detalhes da compra
           </p>
