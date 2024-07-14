@@ -55,7 +55,7 @@ export function Login() {
 
   return (
     <Container>
-      <div className="w-full min-h-screen flex justify-center items-center flex-col gap-4">
+      <div className="w-full min-h-screen flex justify-center items-center flex-col gap-4 my-6">
         <Link to="/" className="mb-6 max-w-sm w-full">
           <img
             src={logoImg}

@@ -8,7 +8,7 @@ export function Checkout() {
           <h1 className="font-bold text-4xl uppercase mb-12">
             Escolha o plano mais vantajoso para você:
           </h1>
-          <div className="w-full flex flex-col bg-black px-3 py-12 text-white rounded-lg mb-8 border border-black shadow-md shadow-slate-300">
+          <div className="w-full flex flex-col bg-black px-3 py-12 text-white rounded-lg mb-10 border border-black shadow-md shadow-slate-300">
             <div className="grid grid-cols-4 items-center text-center mb-8">
               <div className="flex justify-center items-center">
                 <button className="border border-white h-3 p-2 mr-4 rounded-sm"></button>
@@ -43,7 +43,7 @@ export function Checkout() {
             </div>
           </div>
 
-          <div className="w-full flex flex-col bg-slate-100 px-3 py-12 text-black rounded-lg mb-8 border border-gray-300 shadow-md shadow-slate-300">
+          <div className="w-full flex flex-col bg-slate-100 px-3 py-12 text-black rounded-lg mb-10 border border-gray-300 shadow-md shadow-slate-300">
             <div className="grid grid-cols-4 items-center text-center mb-8">
               <div className="flex justify-center items-center">
                 <button className="border border-black h-3 p-2 mr-4 rounded-sm"></button>
@@ -78,7 +78,7 @@ export function Checkout() {
             </div>
           </div>
 
-          <div className="w-full flex flex-col bg-slate-100 px-3 py-12 text-black rounded-lg mb-8 border border-gray-300 shadow-md shadow-slate-300">
+          <div className="w-full flex flex-col bg-slate-100 px-3 py-12 text-black rounded-lg mb-10 border border-gray-300 shadow-md shadow-slate-300">
             <div className="grid grid-cols-4 items-center text-center mb-8">
               <div className="flex justify-center items-center">
                 <button className="border border-black h-3 p-2 mr-4 rounded-sm"></button>
@@ -114,7 +114,7 @@ export function Checkout() {
           </div>
         </div>
 
-        <div className="w-[40%] ml-20 bg-slate-200 py-8 px-6 flex flex-col rounded-lg  shadow-md shadow-slate-300 mb-8">
+        <div className="w-[40%] h-full ml-20 bg-slate-200 py-8 px-6 flex flex-col rounded-lg  shadow-md shadow-slate-300 mb-8">
           <p className="font-bold text-2xl mb-2 text-left">
             Detalhes da compra
           </p>
@@ -122,9 +122,9 @@ export function Checkout() {
             Academia escolhida:{" "}
             <span className="font-medium text-base">GM Fit 1</span>
           </p>
-          <div className="w-full border border-gray-300 mt-6 mb-12"></div>
+          <div className="w-full border border-gray-300 mt-6 mb-8"></div>
 
-          <div className="w-[90%] flex flex-col mx-auto gap-4 border border-gray-300 bg-white py-6 px-6 rounded-lg">
+          <div className="w-[90%] flex flex-col mx-auto gap-4 border border-gray-300 bg-white py-6 px-6 rounded-lg h-72 overflow-y-scroll">
             <div className="flex justify-between">
               <p className="uppercase text-xs font-bold">1ª cobrança</p>
               <p className="font-bold text-sm">R$ 9,90</p>
@@ -206,6 +206,63 @@ export function Checkout() {
               <p className="uppercase text-xs font-bold">12ª cobrança</p>
               <p className="font-bold text-sm">R$ 9,90</p>
             </div>
+          </div>
+
+          <div className="w-full border border-gray-300 mt-8 mb-8"></div>
+
+          <p className="font-bold text-2xl mb-6 text-left">Pagamento</p>
+
+          <div className="flex flex-col w-[90%] mx-auto gap-4">
+            <select className="p-2 rounded-lg">
+              <option>Mastercard</option>
+              <option>Visa</option>
+              <option>Elo</option>
+            </select>
+            <input
+              type="text"
+              placeholder="Nome no cartão..."
+              className="p-2 rounded-lg"
+            />
+            <input
+              type="number"
+              placeholder="Nº no cartão..."
+              className="p-2 rounded-lg"
+            />
+            <input
+              type="number"
+              placeholder="CPF do titular..."
+              className="p-2 rounded-lg"
+            />
+            <div className="flex gap-2">
+              <input
+                type="number"
+                placeholder="CCV"
+                className="p-2 rounded-lg w-[50%]"
+              />
+              <input
+                type="text"
+                placeholder="12/2024"
+                className="p-2 rounded-lg w-[50%]"
+              />
+            </div>
+            <select className="p-2 rounded-lg">
+              <option disabled>Parcelamento</option>
+              <option>1x - R$ 9,90</option>
+              <option>2x - R$ 9,90</option>
+              <option>3x - R$ 9,90</option>
+              <option>4x - R$ 9,90</option>
+              <option>5x - R$ 9,90</option>
+              <option>6x - R$ 9,90</option>
+              <option>7x - R$ 9,90</option>
+              <option>8x - R$ 9,90</option>
+              <option>9x - R$ 9,90</option>
+              <option>10x - R$ 9,90</option>
+              <option>11x - R$ 9,90</option>
+              <option>12x - R$ 9,90</option>
+            </select>
+            <button className="bg-black p-2 rounded-lg font-bold text-white mt-2 hover:bg-yellow-500 hover:text-black transition-all">
+              Finalizar compra
+            </button>
           </div>
         </div>
       </section>
