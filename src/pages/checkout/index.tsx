@@ -17,6 +17,63 @@ export function Checkout() {
     getAcademia();
   }, [id]);
 
+  const checkBlack = document.getElementById("checked-black");
+  const checkFit = document.getElementById("checked-fit");
+  const checkSmart = document.getElementById("checked-smart");
+  const cobranca2 = document.getElementById("cobranca2");
+  const cobranca3 = document.getElementById("cobranca3");
+  const cobranca4 = document.getElementById("cobranca4");
+  const cobranca5 = document.getElementById("cobranca5");
+  const cobranca6 = document.getElementById("cobranca6");
+  const cobranca7 = document.getElementById("cobranca7");
+  const cobranca8 = document.getElementById("cobranca8");
+  const cobranca9 = document.getElementById("cobranca9");
+  const cobranca10 = document.getElementById("cobranca10");
+  const cobranca11 = document.getElementById("cobranca11");
+  const cobranca12 = document.getElementById("cobranca12");
+
+  checkBlack?.addEventListener("click", () => {
+    cobranca2.innerText = "R$ 139,99";
+    cobranca3.innerText = "R$ 139,99";
+    cobranca4.innerText = "R$ 139,99";
+    cobranca5.innerText = "R$ 139,99";
+    cobranca6.innerText = "R$ 139,99";
+    cobranca7.innerText = "R$ 139,99";
+    cobranca8.innerText = "R$ 139,99";
+    cobranca9.innerText = "R$ 139,99";
+    cobranca10.innerText = "R$ 139,99";
+    cobranca11.innerText = "R$ 139,99";
+    cobranca12.innerText = "R$ 139,99";
+  });
+
+  checkFit?.addEventListener("click", () => {
+    cobranca2.innerText = "R$ 129,99";
+    cobranca3.innerText = "R$ 129,99";
+    cobranca4.innerText = "R$ 129,99";
+    cobranca5.innerText = "R$ 129,99";
+    cobranca6.innerText = "R$ 129,99";
+    cobranca7.innerText = "R$ 129,99";
+    cobranca8.innerText = "R$ 129,99";
+    cobranca9.innerText = "R$ 129,99";
+    cobranca10.innerText = "R$ 129,99";
+    cobranca11.innerText = "R$ 129,99";
+    cobranca12.innerText = "R$ 129,99";
+  });
+
+  checkSmart?.addEventListener("click", () => {
+    cobranca2.innerText = "R$ 149,99";
+    cobranca3.innerText = "R$ 149,99";
+    cobranca4.innerText = "R$ 149,99";
+    cobranca5.innerText = "R$ 149,99";
+    cobranca6.innerText = "R$ 149,99";
+    cobranca7.innerText = "R$ 149,99";
+    cobranca8.innerText = "R$ 149,99";
+    cobranca9.innerText = "R$ 149,99";
+    cobranca10.innerText = "R$ 149,99";
+    cobranca11.innerText = "R$ 149,99";
+    cobranca12.innerText = "R$ 149,99";
+  });
+
   return (
     <Container>
       {academia && (
@@ -56,7 +113,12 @@ export function Checkout() {
                 <div className="flex flex-col items-start pl-10">
                   <p className="uppercase font-bold text-base line-through text-red-600">
                     <span className=" text-white">De:</span>{" "}
-                    <span className="text-white">{academia.black}</span>
+                    <span className="text-white">
+                      {academia.black.toLocaleString("pt-BR", {
+                        style: "currency",
+                        currency: "BRL",
+                      })}
+                    </span>
                   </p>
                   <p className="uppercase font-bold text-sm">por:</p>
                   <p className="uppercase font-bold text-3xl mb-7">
@@ -64,7 +126,12 @@ export function Checkout() {
                   </p>
                   <p className="text-sm text-left ">
                     <span className="font-medium text-sm">no 1° mês</span>,
-                    depois R$ {academia.black}/mês
+                    depois{" "}
+                    {academia.black.toLocaleString("pt-BR", {
+                      style: "currency",
+                      currency: "BRL",
+                    })}
+                    /mês
                   </p>
                 </div>
               </div>
@@ -100,7 +167,12 @@ export function Checkout() {
                 <div className="flex flex-col items-start pl-10">
                   <p className="uppercase font-bold text-base line-through text-red-600">
                     <span className=" text-black">De:</span>{" "}
-                    <span className="text-black">{academia.fit}</span>
+                    <span className="text-black">
+                      {academia.fit.toLocaleString("pt-BR", {
+                        style: "currency",
+                        currency: "BRL",
+                      })}
+                    </span>
                   </p>
                   <p className="uppercase font-bold text-sm">por:</p>
                   <p className="uppercase font-bold text-3xl mb-7">
@@ -108,7 +180,12 @@ export function Checkout() {
                   </p>
                   <p className="text-sm text-left ">
                     <span className="font-medium text-sm">no 1° mês</span>,
-                    depois R$ {academia.fit}/mês
+                    depois{" "}
+                    {academia.fit.toLocaleString("pt-BR", {
+                      style: "currency",
+                      currency: "BRL",
+                    })}
+                    /mês
                   </p>
                 </div>
               </div>
@@ -144,7 +221,12 @@ export function Checkout() {
                 <div className="flex flex-col items-start pl-10">
                   <p className="uppercase font-bold text-base line-through text-red-600">
                     <span className=" text-black">De:</span>{" "}
-                    <span className="text-black">{academia.smart}</span>
+                    <span className="text-black">
+                      {academia.smart.toLocaleString("pt-BR", {
+                        style: "currency",
+                        currency: "BRL",
+                      })}
+                    </span>
                   </p>
                   <p className="uppercase font-bold text-sm">por:</p>
                   <p className="uppercase font-bold text-3xl mb-7">
@@ -152,7 +234,12 @@ export function Checkout() {
                   </p>
                   <p className="text-sm text-left ">
                     <span className="font-medium text-sm">no 1° mês</span>,
-                    depois R$ {academia.smart}/mês
+                    depois{" "}
+                    {academia.smart.toLocaleString("pt-BR", {
+                      style: "currency",
+                      currency: "BRL",
+                    })}
+                    /mês
                   </p>
                 </div>
               </div>
@@ -178,84 +265,139 @@ export function Checkout() {
             <div className="w-[90%] flex flex-col mx-auto gap-4 border border-gray-300 bg-white py-6 px-6 rounded-lg h-72 overflow-y-scroll">
               <div className="flex justify-between">
                 <p className="uppercase text-xs font-bold">1ª cobrança</p>
-                <p className="font-bold text-sm">R$ 9,90</p>
+                <p className="font-bold text-sm">R$ 9,99</p>
               </div>
 
               <div className="w-full border border-gray-200"></div>
 
               <div className="flex justify-between">
                 <p className="uppercase text-xs font-bold">2ª cobrança</p>
-                <p className="font-bold text-sm">R$ 9,90</p>
+                <p className="font-bold text-sm" id="cobranca2">
+                  {academia.black.toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </p>
               </div>
 
               <div className="w-full border border-gray-200"></div>
 
               <div className="flex justify-between">
                 <p className="uppercase text-xs font-bold">3ª cobrança</p>
-                <p className="font-bold text-sm">R$ 9,90</p>
+                <p className="font-bold text-sm" id="cobranca3">
+                  {academia.black.toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </p>
               </div>
 
               <div className="w-full border border-gray-200"></div>
 
               <div className="flex justify-between">
                 <p className="uppercase text-xs font-bold">4ª cobrança</p>
-                <p className="font-bold text-sm">R$ 9,90</p>
+                <p className="font-bold text-sm" id="cobranca4">
+                  {academia.black.toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </p>
               </div>
 
               <div className="w-full border border-gray-200"></div>
 
               <div className="flex justify-between">
                 <p className="uppercase text-xs font-bold">5ª cobrança</p>
-                <p className="font-bold text-sm">R$ 9,90</p>
+                <p className="font-bold text-sm" id="cobranca5">
+                  {academia.black.toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </p>
               </div>
 
               <div className="w-full border border-gray-200"></div>
 
               <div className="flex justify-between">
                 <p className="uppercase text-xs font-bold">6ª cobrança</p>
-                <p className="font-bold text-sm">R$ 9,90</p>
+                <p className="font-bold text-sm" id="cobranca6">
+                  {academia.black.toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </p>
               </div>
 
               <div className="w-full border border-gray-200"></div>
 
               <div className="flex justify-between">
                 <p className="uppercase text-xs font-bold">7ª cobrança</p>
-                <p className="font-bold text-sm">R$ 9,90</p>
+                <p className="font-bold text-sm" id="cobranca7">
+                  {academia.black.toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </p>
               </div>
 
               <div className="w-full border border-gray-200"></div>
 
               <div className="flex justify-between">
                 <p className="uppercase text-xs font-bold">8ª cobrança</p>
-                <p className="font-bold text-sm">R$ 9,90</p>
+                <p className="font-bold text-sm" id="cobranca8">
+                  {academia.black.toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </p>
               </div>
 
               <div className="w-full border border-gray-200"></div>
 
               <div className="flex justify-between">
                 <p className="uppercase text-xs font-bold">9ª cobrança</p>
-                <p className="font-bold text-sm">R$ 9,90</p>
+                <p className="font-bold text-sm" id="cobranca9">
+                  {academia.black.toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </p>
               </div>
 
               <div className="w-full border border-gray-200"></div>
 
               <div className="flex justify-between">
                 <p className="uppercase text-xs font-bold">10ª cobrança</p>
-                <p className="font-bold text-sm">R$ 9,90</p>
+                <p className="font-bold text-sm" id="cobranca10">
+                  {academia.black.toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </p>
               </div>
 
               <div className="w-full border border-gray-200"></div>
 
               <div className="flex justify-between">
                 <p className="uppercase text-xs font-bold">11ª cobrança</p>
-                <p className="font-bold text-sm">R$ 9,90</p>
+                <p className="font-bold text-sm" id="cobranca11">
+                  {academia.black.toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </p>
               </div>
 
               <div className="w-full border border-gray-200"></div>
 
               <div className="flex justify-between">
                 <p className="uppercase text-xs font-bold">12ª cobrança</p>
-                <p className="font-bold text-sm">R$ 9,90</p>
+                <p className="font-bold text-sm" id="cobranca12">
+                  {academia.black.toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </p>
               </div>
             </div>
 

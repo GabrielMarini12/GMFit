@@ -145,20 +145,42 @@ export function Planos() {
             <tr className="grid grid-cols-4 mb-6 h-32 max-sm:h-44 items-center">
               <td></td>
               <td className="text-xl">
-                <span className="font-bold">R$ {academia.promotion}*</span>
+                <span className="font-bold">
+                  {academia.promotion.toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                  *
+                </span>
                 <p className="text-sm text-gray-500 mt-1">
                   <span className="text-black font-medium">no 1º mês</span>,
-                  depois R$ {academia.black} /mês
+                  depois{" "}
+                  {academia.black.toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}{" "}
+                  /mês
                 </p>
                 <p className="text-xs text-gray-400 pt-1 max-sm:hidden">
                   12 meses de fidelidade
                 </p>
               </td>
               <td className="text-xl">
-                <span className="font-bold">R$ {academia.promotion}*</span>
+                <span className="font-bold">
+                  {academia.promotion.toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                  *
+                </span>
                 <p className="text-sm text-gray-500 mt-1">
                   <span className="text-black font-medium">no 1º mês</span>,
-                  depois R$ {academia.fit} /mês
+                  depois{" "}
+                  {academia.fit.toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}{" "}
+                  /mês
                 </p>
                 <p className="text-xs text-gray-400 pt-1 max-sm:hidden">
                   12 meses de fidelidade
@@ -168,10 +190,21 @@ export function Planos() {
                 </p>
               </td>
               <td className="text-xl">
-                <span className="font-bold">R$ {academia.promotion}*</span>
+                <span className="font-bold">
+                  {academia.promotion.toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                  *
+                </span>
                 <p className="text-sm text-gray-500 mt-1">
                   <span className="text-black font-medium">no 1º mês</span>,
-                  depois R$ {academia.smart} /mês
+                  depois{" "}
+                  {academia.smart.toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}{" "}
+                  /mês
                 </p>
                 <p className="text-xs text-gray-400 pt-1 max-sm:hidden">
                   12 meses de fidelidade
