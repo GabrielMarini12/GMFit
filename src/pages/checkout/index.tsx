@@ -191,6 +191,58 @@ export function Checkout() {
       ((149.99 * 11 + 9.99) / 12).toFixed(2).toString().replace(".", ",");
   });
 
+  const btnPagar = document.getElementById("btn-pagar");
+  const nomeCartao = document.getElementById("nome-cartao");
+  const numeroCartao = document.getElementById("numero-cartao");
+  const cpfCartao = document.getElementById("cpf-cartao");
+  const cvvCartao = document.getElementById("cvv-cartao");
+  const validadeCartao = document.getElementById("validade-cartao");
+  const smallNome = document.getElementById("small-nome");
+  const smallNumero = document.getElementById("small-numero");
+  const smallCpf = document.getElementById("small-cpf");
+  const smallCvv = document.getElementById("small-cvv");
+  const smallValidade = document.getElementById("small-validade");
+  btnPagar?.addEventListener("click", () => {
+    if (nomeCartao.value === "") {
+      smallNome.className = "text-red-600 -mt-3 pl-2";
+    } else {
+      smallNome.className = "text-red-600 -mt-3 pl-2 hidden";
+    }
+
+    if (numeroCartao.value === "") {
+      smallNumero.className = "text-red-600 -mt-3 pl-2";
+    } else if (
+      numeroCartao.value.length < 16 ||
+      numeroCartao.value.length > 16
+    ) {
+      smallNumero.className = "text-red-600 -mt-3 pl-2";
+    } else {
+      smallNumero.className = "text-red-600 -mt-3 pl-2 hidden";
+    }
+
+    if (cpfCartao.value === "") {
+      smallCpf.className = "text-red-600 -mt-3 pl-2";
+    } else if (cpfCartao.value.length < 11 || cpfCartao.value.length > 11) {
+      smallCpf.className = "text-red-600 -mt-3 pl-2";
+    } else {
+      smallCpf.className = "text-red-600 -mt-3 pl-2 hidden";
+    }
+
+    if (cvvCartao.value === "") {
+      smallCvv.className = "text-red-600 mt-1 pl-2";
+    } else if (cvvCartao.value.length < 3 || cvvCartao.value.length > 3) {
+      smallCvv.className = "text-red-600 mt-1 pl-2";
+    } else {
+      smallCvv.className = "text-red-600 mt-1 pl-2 hidden";
+    }
+
+    if (validadeCartao.value === "") {
+      smallValidade.className = "text-red-600 mt-1 pl-2";
+    } else {
+      smallValidade.className = "text-red-600 mt-1 pl-2 hidden";
+    }
+  });
+
   return (
     <Container>
       {academia && (
@@ -532,28 +584,61 @@ export function Checkout() {
                 type="text"
                 placeholder="Nome no cartão..."
                 className="p-2 rounded-lg"
+                id="nome-cartao"
               />
+              <small className="text-red-600 -mt-3 pl-2 hidden" id="small-nome">
+                O nome é obrigatório
+              </small>
               <input
                 type="number"
                 placeholder="Nº no cartão..."
                 className="p-2 rounded-lg"
+                id="numero-cartao"
               />
+              <small
+                className="text-red-600 -mt-3 pl-2 hidden"
+                id="small-numero"
+              >
+                O número é obrigatório
+              </small>
               <input
                 type="number"
                 placeholder="CPF do titular..."
                 className="p-2 rounded-lg"
+                id="cpf-cartao"
               />
+              <small className="text-red-600 -mt-3 pl-2 hidden" id="small-cpf">
+                O CPF é obrigatório
+              </small>
               <div className="flex gap-2">
-                <input
-                  type="number"
-                  placeholder="CVV"
-                  className="p-2 rounded-lg w-[50%]"
-                />
-                <input
-                  type="text"
-                  placeholder="12/2024"
-                  className="p-2 rounded-lg w-[50%]"
-                />
+                <div className="flex flex-col">
+                  <input
+                    type="number"
+                    placeholder="CVV"
+                    className="p-2 rounded-lg w-full"
+                    id="cvv-cartao"
+                  />
+                  <small
+                    className="text-red-600 mt-1 pl-2 hidden"
+                    id="small-cvv"
+                  >
+                    O CVV é obrigatório
+                  </small>
+                </div>
+                <div className="flex flex-col">
+                  <input
+                    type="text"
+                    placeholder="12/2024"
+                    className="p-2 rounded-lg w-full"
+                    id="validade-cartao"
+                  />
+                  <small
+                    className="text-red-600 mt-1 pl-2 hidden"
+                    id="small-validade"
+                  >
+                    A validade é obrigatória
+                  </small>
+                </div>
               </div>
               <select className="p-2 rounded-lg">
                 <option disabled>Parcelamento</option>
@@ -678,7 +763,10 @@ export function Checkout() {
                   })}
                 </option>
               </select>
-              <button className="bg-black p-2 rounded-lg font-bold text-white mt-2 hover:bg-yellow-500 hover:text-black transition-all">
+              <button
+                className="bg-black p-2 rounded-lg font-bold text-white mt-2 hover:bg-yellow-500 hover:text-black transition-all"
+                id="btn-pagar"
+              >
                 Finalizar compra
               </button>
             </div>
