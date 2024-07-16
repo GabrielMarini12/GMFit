@@ -31,6 +31,18 @@ export function Checkout() {
   const cobranca10 = document.getElementById("cobranca10");
   const cobranca11 = document.getElementById("cobranca11");
   const cobranca12 = document.getElementById("cobranca12");
+  const parcelamento1 = document.getElementById("parcelamento1");
+  const parcelamento2 = document.getElementById("parcelamento2");
+  const parcelamento3 = document.getElementById("parcelamento3");
+  const parcelamento4 = document.getElementById("parcelamento4");
+  const parcelamento5 = document.getElementById("parcelamento5");
+  const parcelamento6 = document.getElementById("parcelamento6");
+  const parcelamento7 = document.getElementById("parcelamento7");
+  const parcelamento8 = document.getElementById("parcelamento8");
+  const parcelamento9 = document.getElementById("parcelamento9");
+  const parcelamento10 = document.getElementById("parcelamento10");
+  const parcelamento11 = document.getElementById("parcelamento11");
+  const parcelamento12 = document.getElementById("parcelamento12");
 
   checkBlack?.addEventListener("click", () => {
     cobranca2.innerText = "R$ 139,99";
@@ -44,6 +56,41 @@ export function Checkout() {
     cobranca10.innerText = "R$ 139,99";
     cobranca11.innerText = "R$ 139,99";
     cobranca12.innerText = "R$ 139,99";
+    parcelamento1.innerText =
+      "1x - R$ " + (139.99 * 11 + 9.99).toFixed(2).toString().replace(".", ",");
+    parcelamento2.innerText =
+      "2x - R$ " +
+      ((139.99 * 11 + 9.99) / 2).toFixed(2).toString().replace(".", ",");
+    parcelamento3.innerText =
+      "3x - R$ " +
+      ((139.99 * 11 + 9.99) / 3).toFixed(2).toString().replace(".", ",");
+    parcelamento4.innerText =
+      "4x - R$ " +
+      ((139.99 * 11 + 9.99) / 4).toFixed(2).toString().replace(".", ",");
+    parcelamento5.innerText =
+      "5x - R$ " +
+      ((139.99 * 11 + 9.99) / 5).toFixed(2).toString().replace(".", ",");
+    parcelamento6.innerText =
+      "6x - R$ " +
+      ((139.99 * 11 + 9.99) / 6).toFixed(2).toString().replace(".", ",");
+    parcelamento7.innerText =
+      "7x - R$ " +
+      ((139.99 * 11 + 9.99) / 7).toFixed(2).toString().replace(".", ",");
+    parcelamento8.innerText =
+      "8x - R$ " +
+      ((139.99 * 11 + 9.99) / 8).toFixed(2).toString().replace(".", ",");
+    parcelamento9.innerText =
+      "9x - R$ " +
+      ((139.99 * 11 + 9.99) / 9).toFixed(2).toString().replace(".", ",");
+    parcelamento10.innerText =
+      "10x - R$ " +
+      ((139.99 * 11 + 9.99) / 10).toFixed(2).toString().replace(".", ",");
+    parcelamento11.innerText =
+      "11x - R$ " +
+      ((139.99 * 11 + 9.99) / 11).toFixed(2).toString().replace(".", ",");
+    parcelamento12.innerText =
+      "12x - R$ " +
+      ((139.99 * 11 + 9.99) / 12).toFixed(2).toString().replace(".", ",");
   });
 
   checkFit?.addEventListener("click", () => {
@@ -58,6 +105,41 @@ export function Checkout() {
     cobranca10.innerText = "R$ 129,99";
     cobranca11.innerText = "R$ 129,99";
     cobranca12.innerText = "R$ 129,99";
+    parcelamento1.innerText =
+      "1x - R$ " + (129.99 * 11 + 9.99).toFixed(2).toString().replace(".", ",");
+    parcelamento2.innerText =
+      "2x - R$ " +
+      ((129.99 * 11 + 9.99) / 2).toFixed(2).toString().replace(".", ",");
+    parcelamento3.innerText =
+      "3x - R$ " +
+      ((129.99 * 11 + 9.99) / 3).toFixed(2).toString().replace(".", ",");
+    parcelamento4.innerText =
+      "4x - R$ " +
+      ((129.99 * 11 + 9.99) / 4).toFixed(2).toString().replace(".", ",");
+    parcelamento5.innerText =
+      "5x - R$ " +
+      ((129.99 * 11 + 9.99) / 5).toFixed(2).toString().replace(".", ",");
+    parcelamento6.innerText =
+      "6x - R$ " +
+      ((129.99 * 11 + 9.99) / 6).toFixed(2).toString().replace(".", ",");
+    parcelamento7.innerText =
+      "7x - R$ " +
+      ((129.99 * 11 + 9.99) / 7).toFixed(2).toString().replace(".", ",");
+    parcelamento8.innerText =
+      "8x - R$ " +
+      ((129.99 * 11 + 9.99) / 8).toFixed(2).toString().replace(".", ",");
+    parcelamento9.innerText =
+      "9x - R$ " +
+      ((129.99 * 11 + 9.99) / 9).toFixed(2).toString().replace(".", ",");
+    parcelamento10.innerText =
+      "10x - R$ " +
+      ((129.99 * 11 + 9.99) / 10).toFixed(2).toString().replace(".", ",");
+    parcelamento11.innerText =
+      "11x - R$ " +
+      ((129.99 * 11 + 9.99) / 11).toFixed(2).toString().replace(".", ",");
+    parcelamento12.innerText =
+      "12x - R$ " +
+      ((129.99 * 11 + 9.99) / 12).toFixed(2).toString().replace(".", ",");
   });
 
   checkSmart?.addEventListener("click", () => {
@@ -72,6 +154,41 @@ export function Checkout() {
     cobranca10.innerText = "R$ 149,99";
     cobranca11.innerText = "R$ 149,99";
     cobranca12.innerText = "R$ 149,99";
+    parcelamento1.innerText =
+      "1x - R$ " + (149.99 * 11 + 9.99).toFixed(2).toString().replace(".", ",");
+    parcelamento2.innerText =
+      "2x - R$ " +
+      ((149.99 * 11 + 9.99) / 2).toFixed(2).toString().replace(".", ",");
+    parcelamento3.innerText =
+      "3x - R$ " +
+      ((149.99 * 11 + 9.99) / 3).toFixed(2).toString().replace(".", ",");
+    parcelamento4.innerText =
+      "4x - R$ " +
+      ((149.99 * 11 + 9.99) / 4).toFixed(2).toString().replace(".", ",");
+    parcelamento5.innerText =
+      "5x - R$ " +
+      ((149.99 * 11 + 9.99) / 5).toFixed(2).toString().replace(".", ",");
+    parcelamento6.innerText =
+      "6x - R$ " +
+      ((149.99 * 11 + 9.99) / 6).toFixed(2).toString().replace(".", ",");
+    parcelamento7.innerText =
+      "7x - R$ " +
+      ((149.99 * 11 + 9.99) / 7).toFixed(2).toString().replace(".", ",");
+    parcelamento8.innerText =
+      "8x - R$ " +
+      ((149.99 * 11 + 9.99) / 8).toFixed(2).toString().replace(".", ",");
+    parcelamento9.innerText =
+      "9x - R$ " +
+      ((149.99 * 11 + 9.99) / 9).toFixed(2).toString().replace(".", ",");
+    parcelamento10.innerText =
+      "10x - R$ " +
+      ((149.99 * 11 + 9.99) / 10).toFixed(2).toString().replace(".", ",");
+    parcelamento11.innerText =
+      "11x - R$ " +
+      ((149.99 * 11 + 9.99) / 11).toFixed(2).toString().replace(".", ",");
+    parcelamento12.innerText =
+      "12x - R$ " +
+      ((149.99 * 11 + 9.99) / 12).toFixed(2).toString().replace(".", ",");
   });
 
   return (
@@ -440,18 +557,126 @@ export function Checkout() {
               </div>
               <select className="p-2 rounded-lg">
                 <option disabled>Parcelamento</option>
-                <option>1x - R$ 9,90</option>
-                <option>2x - R$ 9,90</option>
-                <option>3x - R$ 9,90</option>
-                <option>4x - R$ 9,90</option>
-                <option>5x - R$ 9,90</option>
-                <option>6x - R$ 9,90</option>
-                <option>7x - R$ 9,90</option>
-                <option>8x - R$ 9,90</option>
-                <option>9x - R$ 9,90</option>
-                <option>10x - R$ 9,90</option>
-                <option>11x - R$ 9,90</option>
-                <option>12x - R$ 9,90</option>
+                <option id="parcelamento1">
+                  1x -{" "}
+                  {(academia.black * 11 + academia.promotion).toLocaleString(
+                    "pt-BR",
+                    {
+                      style: "currency",
+                      currency: "BRL",
+                    }
+                  )}
+                </option>
+                <option id="parcelamento2">
+                  2x -{" "}
+                  {(
+                    (academia.black * 11 + academia.promotion) /
+                    2
+                  ).toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </option>
+                <option id="parcelamento3">
+                  3x -{" "}
+                  {(
+                    (academia.black * 11 + academia.promotion) /
+                    3
+                  ).toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </option>
+                <option id="parcelamento4">
+                  4x -{" "}
+                  {(
+                    (academia.black * 11 + academia.promotion) /
+                    4
+                  ).toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </option>
+                <option id="parcelamento5">
+                  5x -{" "}
+                  {(
+                    (academia.black * 11 + academia.promotion) /
+                    5
+                  ).toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </option>
+                <option id="parcelamento6">
+                  6x -{" "}
+                  {(
+                    (academia.black * 11 + academia.promotion) /
+                    6
+                  ).toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </option>
+                <option id="parcelamento7">
+                  7x -{" "}
+                  {(
+                    (academia.black * 11 + academia.promotion) /
+                    7
+                  ).toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </option>
+                <option id="parcelamento8">
+                  8x -{" "}
+                  {(
+                    (academia.black * 11 + academia.promotion) /
+                    8
+                  ).toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </option>
+                <option id="parcelamento9">
+                  9x -{" "}
+                  {(
+                    (academia.black * 11 + academia.promotion) /
+                    9
+                  ).toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </option>
+                <option id="parcelamento10">
+                  10x -{" "}
+                  {(
+                    (academia.black * 11 + academia.promotion) /
+                    10
+                  ).toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </option>
+                <option id="parcelamento11">
+                  11x -{" "}
+                  {(
+                    (academia.black * 11 + academia.promotion) /
+                    11
+                  ).toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </option>
+                <option id="parcelamento12">
+                  12x -{" "}
+                  {(
+                    (academia.black * 11 + academia.promotion) /
+                    12
+                  ).toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </option>
               </select>
               <button className="bg-black p-2 rounded-lg font-bold text-white mt-2 hover:bg-yellow-500 hover:text-black transition-all">
                 Finalizar compra
