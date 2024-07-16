@@ -546,7 +546,7 @@ export function Checkout() {
               <div className="flex gap-2">
                 <input
                   type="number"
-                  placeholder="CCV"
+                  placeholder="CVV"
                   className="p-2 rounded-lg w-[50%]"
                 />
                 <input
