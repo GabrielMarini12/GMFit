@@ -13,6 +13,7 @@
   - axios
   - firebase
   - swiper
+  - toast
 
 - Rodar Api
   - json-server --watch db.json

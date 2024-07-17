@@ -269,7 +269,7 @@ export function Checkout() {
                   </p>
                 </div>
                 <div className="bg-black absolute w-5 h-5 top-[-34px] right-44 rotate-45"></div>
-                <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center ">
                   <input
                     type="radio"
                     className="peer hidden"
