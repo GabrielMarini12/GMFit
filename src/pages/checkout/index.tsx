@@ -203,43 +203,53 @@ export function Checkout() {
   const smallCvv = document.getElementById("small-cvv");
   const smallValidade = document.getElementById("small-validade");
   btnPagar?.addEventListener("click", () => {
-    if (nomeCartao.value === "") {
-      smallNome.className = "text-red-600 -mt-3 pl-2";
-    } else {
-      smallNome.className = "text-red-600 -mt-3 pl-2 hidden";
-    }
-
-    if (numeroCartao.value === "") {
-      smallNumero.className = "text-red-600 -mt-3 pl-2";
-    } else if (
-      numeroCartao.value.length < 16 ||
-      numeroCartao.value.length > 16
+    if (
+      nomeCartao.value != "" &&
+      numeroCartao.value != "" &&
+      cpfCartao.value != "" &&
+      cvvCartao.value != "" &&
+      validadeCartao.value != ""
     ) {
-      smallNumero.className = "text-red-600 -mt-3 pl-2";
+      alert("Pagamento efetuado com sucesso!");
     } else {
-      smallNumero.className = "text-red-600 -mt-3 pl-2 hidden";
-    }
+      if (nomeCartao.value === "") {
+        smallNome.className = "text-red-600 -mt-3 pl-2";
+      } else {
+        smallNome.className = "text-red-600 -mt-3 pl-2 hidden";
+      }
 
-    if (cpfCartao.value === "") {
-      smallCpf.className = "text-red-600 -mt-3 pl-2";
-    } else if (cpfCartao.value.length < 11 || cpfCartao.value.length > 11) {
-      smallCpf.className = "text-red-600 -mt-3 pl-2";
-    } else {
-      smallCpf.className = "text-red-600 -mt-3 pl-2 hidden";
-    }
+      if (numeroCartao.value === "") {
+        smallNumero.className = "text-red-600 -mt-3 pl-2";
+      } else if (
+        numeroCartao.value.length < 16 ||
+        numeroCartao.value.length > 16
+      ) {
+        smallNumero.className = "text-red-600 -mt-3 pl-2";
+      } else {
+        smallNumero.className = "text-red-600 -mt-3 pl-2 hidden";
+      }
 
-    if (cvvCartao.value === "") {
-      smallCvv.className = "text-red-600 mt-1 pl-2";
-    } else if (cvvCartao.value.length < 3 || cvvCartao.value.length > 3) {
-      smallCvv.className = "text-red-600 mt-1 pl-2";
-    } else {
-      smallCvv.className = "text-red-600 mt-1 pl-2 hidden";
-    }
+      if (cpfCartao.value === "") {
+        smallCpf.className = "text-red-600 -mt-3 pl-2";
+      } else if (cpfCartao.value.length < 11 || cpfCartao.value.length > 11) {
+        smallCpf.className = "text-red-600 -mt-3 pl-2";
+      } else {
+        smallCpf.className = "text-red-600 -mt-3 pl-2 hidden";
+      }
 
-    if (validadeCartao.value === "") {
-      smallValidade.className = "text-red-600 mt-1 pl-2";
-    } else {
-      smallValidade.className = "text-red-600 mt-1 pl-2 hidden";
+      if (cvvCartao.value === "") {
+        smallCvv.className = "text-red-600 mt-1 pl-2";
+      } else if (cvvCartao.value.length < 3 || cvvCartao.value.length > 3) {
+        smallCvv.className = "text-red-600 mt-1 pl-2";
+      } else {
+        smallCvv.className = "text-red-600 mt-1 pl-2 hidden";
+      }
+
+      if (validadeCartao.value === "") {
+        smallValidade.className = "text-red-600 mt-1 pl-2";
+      } else {
+        smallValidade.className = "text-red-600 mt-1 pl-2 hidden";
+      }
     }
   });
 
