@@ -214,7 +214,6 @@ export function Checkout() {
       validadeCartao.value != ""
     ) {
       toast.success("Compra efetuada com sucesso!");
-      console.log("deu certo");
       nomeCartao.value = "";
       numeroCartao.value = "";
       cpfCartao.value = "";
