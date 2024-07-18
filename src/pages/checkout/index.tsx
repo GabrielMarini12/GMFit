@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { Container } from "../../components/container";
 import { api } from "../../services/api";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { AcademiaProps } from "../home";
 
 import toast from "react-hot-toast";
 
 export function Checkout() {
+  const navigate = useNavigate();
   const { id } = useParams();
   const [academia, setAcademia] = useState<AcademiaProps>();
 
@@ -213,6 +214,18 @@ export function Checkout() {
       validadeCartao.value != ""
     ) {
       toast.success("Compra efetuada com sucesso!");
+      console.log("deu certo");
+      nomeCartao.value = "";
+      numeroCartao.value = "";
+      cpfCartao.value = "";
+      cvvCartao.value = "";
+      validadeCartao.value = "";
+      smallNome.className = "text-red-600 -mt-3 pl-2 hidden";
+      smallNumero.className = "text-red-600 -mt-3 pl-2 hidden";
+      smallCpf.className = "text-red-600 -mt-3 pl-2 hidden";
+      smallCvv.className = "text-red-600 mt-1 pl-2 hidden";
+      smallValidade.className = "text-red-600 mt-1 pl-2 hidden";
+      navigate("/", { replace: true });
     } else {
       if (nomeCartao.value === "") {
         smallNome.className = "text-red-600 -mt-3 pl-2";
@@ -222,30 +235,18 @@ export function Checkout() {
 
       if (numeroCartao.value === "") {
         smallNumero.className = "text-red-600 -mt-3 pl-2";
-      } else if (
-        numeroCartao.value.length < 16 ||
-        numeroCartao.value.length > 16
-      ) {
-        smallNumero.className = "text-red-600 -mt-3 pl-2";
-        toast.error("O número do cartão deve ter 16 caracteres.");
       } else {
         smallNumero.className = "text-red-600 -mt-3 pl-2 hidden";
       }
 
       if (cpfCartao.value === "") {
         smallCpf.className = "text-red-600 -mt-3 pl-2";
-      } else if (cpfCartao.value.length < 11 || cpfCartao.value.length > 11) {
-        smallCpf.className = "text-red-600 -mt-3 pl-2";
-        toast.error("O CPF deve ter 11 caracteres.");
       } else {
         smallCpf.className = "text-red-600 -mt-3 pl-2 hidden";
       }
 
       if (cvvCartao.value === "") {
         smallCvv.className = "text-red-600 mt-1 pl-2";
-      } else if (cvvCartao.value.length < 3 || cvvCartao.value.length > 3) {
-        smallCvv.className = "text-red-600 mt-1 pl-2";
-        toast.error("O CVV deve ter 3 caracteres.");
       } else {
         smallCvv.className = "text-red-600 mt-1 pl-2 hidden";
       }
