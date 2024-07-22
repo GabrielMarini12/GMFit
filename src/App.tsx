@@ -5,6 +5,7 @@ import { Registro } from "./pages/register";
 import { Academias } from "./pages/academias";
 import { Planos } from "./pages/planos";
 import { Checkout } from "./pages/checkout";
+import { Finish } from "./pages/finish";
 
 import { Layout } from "./components/layout";
 import { Private } from "./routes/Private";
@@ -38,6 +39,14 @@ const router = createBrowserRouter([
         element: (
           <Private>
             <Checkout />
+          </Private>
+        ),
+      },
+      {
+        path: "/finish/:id",
+        element: (
+          <Private>
+            <Finish />
           </Private>
         ),
       },

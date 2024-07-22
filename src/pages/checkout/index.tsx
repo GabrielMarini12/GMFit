@@ -75,7 +75,7 @@ export function Checkout() {
       validadeCartao != ""
     ) {
       toast.success("Compra realizada com sucesso!");
-      navigate("/");
+      navigate(`/finish/${id}`);
     }
   }
 
