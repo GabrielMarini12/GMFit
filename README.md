@@ -105,7 +105,7 @@ Aplicação web de compra de planos de academias da mesma rede 🏋️
 
 # Características
 
-As principais características do aplicativo são:
+As principais características do site são:
 - Autenticação de usuários.
 - Proteção de páginas, ou seja, só o usuário logados podem visualizar páginas de detalhes, planos e finalizar um compra.
 - Slider de imagens.
