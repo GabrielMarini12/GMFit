@@ -1,6 +1,6 @@
 # GMFit
 
-Aplicação web de compra de planos de academias da mesma rede 🏋️
+Site de compra de planos de academias da mesma rede 🏋️
 
 # Tecnologia
 
