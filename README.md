@@ -11,12 +11,16 @@ Site de compra de planos de academias da mesma rede 🏋️
 - Dependência
   - tailwindcss
   - react router dom
+    - npm install react-router-dom
+    - npm install localforage match-sorter sort-by
   - react icons
+    - npm install react-icons --save
   - react hook form
     - npm install @hookform/resolvers
   - zod
   - npm install -g json-server
   - axios
+    - npm i axios
   - firebase
   - swiper
   - toast
